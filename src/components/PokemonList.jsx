@@ -1,26 +1,3 @@
-import {render} from 'react-dom';
-import React, {Component} from 'react';
-import fetch from 'isomorphic-fetch';
-
-
-//The Pokemon component will show an individual Pokemon monster
-// It shows an image of the Pokemon and
-// shows the name of it as well.
-class Pokemon extends Component{
-  render(){
-    const {pokemon,id} = this.props;
-    return <div className="pokemon--species">
-            <div className="pokemon--species--container">
-              <div className="pokemon--species--sprite">
-                <img src={`/public/sprites/${id}.png`} />
-              </div>
-              <div className="pokemon--species--name"> {pokemon.name} </div>
-            </div>
-          </div>;
-    }
-}
-
-
 //The PokemonList component shows nothing when it mounts for the first time. 
 //But right before it mounts on to the DOM, it makes an 
 //API call to fetch the first 151 Pokemon from the API and 
@@ -65,17 +42,3 @@ class PokemonList extends Component{
     </div>;
   }
 }
-
-
-//This is the root component
-class PokeApp extends Component{
-  render(){
-    return <div className="pokeapp">
-      <h1> The Kanto PokeDex! </h1>
-      <PokemonList/>
-    </div>;
-  }
-}
-
-render(<PokeApp/>,document.getElementById('app'))
-
