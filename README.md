@@ -1,0 +1,2 @@
+# apokiter
+Pokedex model &amp; +
