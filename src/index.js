@@ -39,7 +39,7 @@ class PokemonList extends Component{
     this.setState({
       loading : true
     });
-    fetch('http://pokeapi.co/api/v2/pokemon?limit=151').then(res=>res.json())
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=151').then(res=>res.json())
     .then(response=>{
       this.setState({
         species : response.results,
@@ -71,7 +71,7 @@ class PokemonList extends Component{
 class PokeApp extends Component{
   render(){
     return <div className="pokeapp">
-      <h1> The Kanto PokeDex! </h1>
+      <h1> The Apokiter App! </h1>
       <PokemonList/>
     </div>;
   }
