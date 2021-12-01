@@ -12,7 +12,7 @@ class Pokemon extends Component{
     return <div className="pokemon--species">
             <div className="pokemon--species--container">
               <div className="pokemon--species--sprite">
-                <img src={`/public/sprites/${id}.png`} />
+                <img src={`/sprites/${id}.webp`} />
               </div>
               <div className="pokemon--species--name"> {pokemon.name} </div>
             </div>
