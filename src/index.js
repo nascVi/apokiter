@@ -39,7 +39,7 @@ class PokemonList extends Component{
     this.setState({
       loading : true
     });
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=151').then(res=>res.json())
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=63').then(res=>res.json()) // Initialy to 151
     .then(response=>{
       this.setState({
         species : response.results,
